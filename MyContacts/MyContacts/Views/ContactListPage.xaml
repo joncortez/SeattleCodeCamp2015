@@ -7,11 +7,11 @@
     
     <ListView x:Name="ContactListView"
               HasUnevenRows="True"
-              SeparatorColor="#ddd"
               ItemsSource="{Binding Contacts}"
               IsPullToRefreshEnabled="True"
               RefreshCommand="{Binding RefreshCommand}"
-              IsRefreshing="{Binding IsRefreshing, Mode=OneWay}">
+              IsRefreshing="{Binding IsRefreshing, Mode=OneWay}"
+              ItemTapped="OnItemSelected">
         
         <ListView.ItemTemplate>
             <DataTemplate>

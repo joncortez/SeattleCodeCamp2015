@@ -45,6 +45,9 @@
     <Compile Include="Services\ServiceLocator.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\ContactListViewModel.cs" />
+    <Compile Include="Views\ContactDetailsPage.xaml.cs">
+      <DependentUpon>ContactDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ContactListPage.xaml.cs">
       <DependentUpon>ContactListPage.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ContactDetailsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
